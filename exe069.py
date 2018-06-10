@@ -4,7 +4,7 @@ while True:
     idade = int(input('Digite a idade: '))
     while True:
         sexo = str(input('Digite o sexo [M/F]: ')).strip().upper()[0]
-        if sexo == 'M' or sexo == 'F':
+        if sexo in 'MF':
             break
     if idade > 18:
         maior += 1
@@ -14,7 +14,7 @@ while True:
         mulheres += 1
     while True:
         op = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
-        if op == 'S' or op == 'N':
+        if op in 'SN':
             break
     if op != 'S':
         break

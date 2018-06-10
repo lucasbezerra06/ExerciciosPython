@@ -1,12 +1,10 @@
 while True:
-    cont = 0
     n = int(input('Digite um número (número negativo para sair):'))
     if n < 0:
         break
-    else:
-        print('=-' * 20)
-        while cont <= 10:
-            print(f'{cont} X {n} = {cont * n}')
-            cont +=1
-        print('=-' * 20)
-print('FIM!')
+    print('=-' * 20)
+    for cont in range(0, 10):
+        print(f'{n} X {cont} = {cont * n}')
+    print('=-' * 20)
+print('PROGRAMA TABUADA ENCERRADO!')
+

@@ -5,18 +5,15 @@ while True:
     cont += 1
     nome = str(input('Digite o nome do produto: ')).strip()
     preco = float(input('Digite o preço do produto: '))
-    if cont == 1:
+    if cont == 1 or preco < precobarato:
         nomebarato = nome
         precobarato = preco
     total += preco
     if preco > 1000:
         quant += 1
-    if preco < precobarato:
-        nomebarato = nome
-        precobarato = preco
     while True:
         op = str(input('Deseja continuar? [S/N]: ')).strip().upper()[0]
-        if op == 'S' or op == 'N':
+        if op in 'SN':
             break
     if op != 'S':
         break
